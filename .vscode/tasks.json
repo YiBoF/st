@@ -28,6 +28,58 @@
             },
             // Use the standard MS compiler pattern to detect errors, warnings and infos
             "problemMatcher": "$msCompile"
-        }
+        },
+        {
+            "label": "运行test2",
+            "type": "shell",
+            "command": "streamlit run test/test2.py",
+            "args": [],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "运行test3",
+            "type": "shell",
+            "command": "streamlit run test/test3.py",
+            "args": [],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "运行test4",
+            "type": "shell",
+            "command": "streamlit run test/test4.py",
+            "args": [],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "运行test5",
+            "type": "shell",
+            "command": "streamlit run test/test5.py",
+            "args": [],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
     ]
 }
