@@ -1,0 +1,8 @@
+Streamlit
+Pandas
+Matplotlib
+Seaborn
+Plotly
+NumPy
+Requests
+Torch
