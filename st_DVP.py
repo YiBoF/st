@@ -7,6 +7,7 @@ import numpy as np  # 引入NumPy库，用于科学计算
 import torch  # 引入PyTorch库，用于机器学习和深度学习
 import requests  # 引入Requests库，用于发送HTTP请求
 from requests.auth import HTTPBasicAuth
+import json
 
 USERNAME = "admin"
 PASSWORD = "password1"
@@ -25,8 +26,10 @@ def get_data_from_druid():
         response = requests.post(druid_url, json=query, headers={'Content-Type': 'application/json'}, auth=HTTPBasicAuth(USERNAME, PASSWORD))
         # 检查响应状态码是否为200（表示成功）
         if response.status_code == 200:
+            text = response.text
+            clean_data = text.replace('\ufeff', '')  # 去除 BOM 字符
             # 将响应数据解析为JSON格式
-            result = response.json()
+            result = json.loads(clean_data)
             # 将JSON数据转换为Pandas DataFrame
             df = pd.DataFrame(result)
             return df  # 返回数据框
